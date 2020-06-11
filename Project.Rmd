@@ -1,0 +1,268 @@
+---
+title: "PCA Of Pima Indians Diabetes Database"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: scroll
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+row
+-----------------------------------------------------------------------
+
+### **Introduction**
+This work is an application for the Principal Component Analysis (PCA) on a Pima Indians Diabetes Database. This dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective of the dataset is to diagnostically predict whether or not a patient has diabetes, based on certain diagnostic measurements included in the dataset. Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage.
+
+The aim here is to use the Principal Component Analysis (PCA) to find whether the existence of possible relations between the variables of the dataset or not.
+
+The datasets consists of 768 observations (rows) and seven several medical predictor variables, which are:  
+
+1. The number of pregnancies the patient has had.    
+2. Plasma glucose concentration a 2 hours in an oral glucose tolerance test (Blood Sugar).  
+3. Diastolic blood pressure, i.e., the number on the bottom (Blood Pressure).  
+4. Body mass index (Mass).  
+5. Diabetes pedigree function (pedigree).  
+6. Age.  
+7. The presence of diabetes (Diabetes).  
+
+Before starting with the analysis, We should mention that the rows have some missing values, so after filtering those rows the data now contains 724 rows. The following three graphs show that the missing values, which exist in the Blood Sugar, Blood Pressure, and Mass variables (The is no human being with zero value in one of those three variables). 
+
+row
+-----------------------------------------------------------------------
+
+### 
+
+```{r}
+knitr::include_graphics("Blood Sugar.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("Blood Pressure.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("Mass.jpg")
+
+```
+
+row
+-----------------------------------------------------------------------
+
+###
+**The PCA**
+
+Let us start our analysis with plotting the Residual Variance of the PCs.  
+It is clear from the graph below that two components are good to make our PCA model but for curiosity, we are going to use three components for this work.
+
+row
+-----------------------------------------------------------------------
+
+###
+
+```{r}
+knitr::include_graphics("1.jpg")
+```
+
+row
+-----------------------------------------------------------------------
+
+###
+Let us now plot the scores of PC1 withe PC2 and the scores of PC1 withe PC3 for our observations. The observations with 0 value and red color refer to the absence of diabetes while 1 with blue color refers to the existence of diabetes.  
+
+We can see below that the results are semi separated and that will help us to reach our goal.
+
+row
+-----------------------------------------------------------------------
+
+### 
+
+```{r}
+knitr::include_graphics("Diabetes.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("6 1-3.jpg")
+
+```
+
+
+
+row
+-----------------------------------------------------------------------
+
+### 
+
+```{r}
+knitr::include_graphics("Ages.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("Preg No.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("Pressure.jpg")
+
+```
+
+row
+-----------------------------------------------------------------------
+
+### 
+
+```{r}
+knitr::include_graphics("Pedigree.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("Mass2.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("Sugar.jpg")
+
+```
+
+row
+-----------------------------------------------------------------------
+
+### 
+
+```{r}
+knitr::include_graphics("Ages 1-3.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("Preg No 1-3.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("Pressure 1-3.jpg")
+
+```
+
+row
+-----------------------------------------------------------------------
+
+### 
+
+```{r}
+knitr::include_graphics("Pedigree 1-3.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("Mass2 1-3.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("Sugar 1-3.jpg")
+
+```
+
+
+row
+-----------------------------------------------------------------------
+
+### 
+
+```{r}
+knitr::include_graphics("2.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("3.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("4.jpg")
+
+```
+
+
+row
+-----------------------------------------------------------------------
+
+### 
+
+```{r}
+knitr::include_graphics("row 1-2.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("row 1-3.jpg")
+
+```
+
+row
+-----------------------------------------------------------------------
+
+### 
+
+```{r}
+knitr::include_graphics("var 1-2.jpg")
+
+```
+
+### 
+
+```{r}
+knitr::include_graphics("var 1-3.jpg")
+
+```
+
+row
+-----------------------------------------------------------------------
+
+### 
+
+```{r}
+knitr::include_graphics("model 1-2.jpg")
+
+```
+
+
