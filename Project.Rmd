@@ -30,24 +30,26 @@ The datasets consists of 768 observations (rows) and seven several medical predi
 
 Before starting with the analysis, We should mention that the rows have some missing values, so after filtering those rows the data now contains 724 rows. The following three graphs show that the missing values, which exist in the Blood Sugar, Blood Pressure, and Mass variables (The is no human being with zero value in one of those three variables). 
 
+Note that, the data variables do not have outliers.
+
 row
 -----------------------------------------------------------------------
 
-### 
+### **Blood Sugar**
 
 ```{r}
 knitr::include_graphics("Blood Sugar.jpg")
 
 ```
 
-### 
+### **Blood Pressure**
 
 ```{r}
 knitr::include_graphics("Blood Pressure.jpg")
 
 ```
 
-### 
+### **Mass**
 
 ```{r}
 knitr::include_graphics("Mass.jpg")
@@ -66,7 +68,7 @@ It is clear from the graph below that two components are good to make our PCA mo
 row
 -----------------------------------------------------------------------
 
-###
+###  **Residual Variance**
 
 ```{r}
 knitr::include_graphics("1.jpg")
@@ -76,47 +78,52 @@ row
 -----------------------------------------------------------------------
 
 ###
-Let us now plot the scores of PC1 withe PC2 and the scores of PC1 withe PC3 for our observations. The observations with 0 value and red color refer to the absence of diabetes while 1 with blue color refers to the existence of diabetes.  
+Let us now plot the scores of PC1 with PC2 and the scores of PC1 with PC3 for our observations. The observations with 0 value and red color refer to the absence of diabetes while 1 with blue color refers to the existence of diabetes.  
 
 We can see below that the results are semi separated and that will help us to reach our goal.
 
 row
 -----------------------------------------------------------------------
 
-### 
+### **Scores of PC1 with PC2**
 
 ```{r}
 knitr::include_graphics("Diabetes.jpg")
 
 ```
 
-### 
+### **Scores of PC1 with PC2**
 
 ```{r}
 knitr::include_graphics("6 1-3.jpg")
 
 ```
 
+row
+-----------------------------------------------------------------------
+
+###
+Let us go deeper with the graphs by plotting the observations of scores of PC1 with PC2 with different classes (variables) of our data.
 
 
 row
 -----------------------------------------------------------------------
 
-### 
+### **Ages**
 
 ```{r}
 knitr::include_graphics("Ages.jpg")
 
 ```
 
-### 
+### **Number of Pregnancies**
 
 ```{r}
 knitr::include_graphics("Preg No.jpg")
 
 ```
 
-### 
+### **Blood Pressure**
 
 ```{r}
 knitr::include_graphics("Pressure.jpg")
@@ -126,26 +133,38 @@ knitr::include_graphics("Pressure.jpg")
 row
 -----------------------------------------------------------------------
 
-### 
+### **Pedigree**
 
 ```{r}
 knitr::include_graphics("Pedigree.jpg")
 
 ```
 
-### 
+### **Mass**
 
 ```{r}
 knitr::include_graphics("Mass2.jpg")
 
 ```
 
-### 
+### **Blood Sugar**
 
 ```{r}
 knitr::include_graphics("Sugar.jpg")
 
 ```
+
+row
+-----------------------------------------------------------------------
+
+###
+For the Ages and Number of Pregnancies, we can see that each class spread from left to right and having points in each area of the observation (0 and 1), while for the Blood Pressure, the point spread without a pattern.
+
+For the Blood Sugar, Mass, and Pedigree, the classes points spread from down to up and covering almost one area of the observations. And that is very clear in the Blood Sugar graph, once we move from left to right the class changes and become closer to the observation area of the 1s. The Pedigree is following this pattern slightly but we can observe it from the graph.
+
+
+
+
 
 row
 -----------------------------------------------------------------------
